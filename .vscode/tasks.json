@@ -1,0 +1,33 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+			{
+					"label": "OpenOCD_flash",
+					"type": "process",
+					"command": "Flash\\OpenOCD_flash.bat",
+					"group": "build",
+					"problemMatcher": []
+			},
+			{
+				"label": "JLink_flash",
+				"type": "process",
+				"command": "Flash\\JLink_flash.bat",
+				"group": "build",
+				"problemMatcher": []
+			},
+			{
+				"label": "run_syscfg",
+				"type": "process",
+				"command": "run_syscfg_main.bat",
+				"group": "build",
+				"problemMatcher": []
+			},
+			{
+				"label": "tempkill",
+				"type": "process",
+				"command": "tempkill.bat",
+				"group": "build",
+				"problemMatcher": []
+			}
+	]
+}

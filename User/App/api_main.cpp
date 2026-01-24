@@ -13,7 +13,6 @@
  * @copyright Copyright (c) 2026
  * 
  */
-#include "ti_msp_dl_config.h"
 
 #include "api_main.h"
 #include "bsp_usart.hpp"
@@ -37,7 +36,7 @@ void blinkTask(void *pvParameters)
   while (true)
   {
     // LED 5Hz频率闪烁
-    DL_GPIO_togglePins(PORTA_PORT, PORTA_LED_USER_PIN);
+    // DL_GPIO_togglePins(PORTA_PORT, PORTA_LED_USER_PIN);
     vTaskDelay(pdMS_TO_TICKS(100));
   }
 }

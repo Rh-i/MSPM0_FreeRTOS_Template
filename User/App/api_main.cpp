@@ -22,7 +22,7 @@
 #include "task.h"
 
 
-void printLogTask()
+void printLogTask(void *pvParameters)
 {
   while (true)
   {
@@ -32,7 +32,7 @@ void printLogTask()
   }
 }
 
-void blinkTask()
+void blinkTask(void *pvParameters)
 {
   while (true)
   {

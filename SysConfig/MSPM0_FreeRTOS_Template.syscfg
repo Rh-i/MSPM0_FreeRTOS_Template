@@ -254,6 +254,7 @@ SYSTICK.interruptPriority = "0";
 SYSTICK.systickEnable     = true;
 
 UART1.$name                    = "UART_0";
+UART1.targetBaudRate           = 115200;
 UART1.peripheral.$assign       = "UART0";
 UART1.peripheral.rxPin.$assign = "PA11";
 UART1.peripheral.txPin.$assign = "PA10";

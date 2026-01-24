@@ -14,6 +14,8 @@
  * 
  */
 
+#include "ti_msp_dl_config.h"
+
 #include "api_main.h"
 #include "bsp_usart.hpp"
 
@@ -27,7 +29,7 @@ void printLogTask(void *pvParameters)
   {
     uart_printf("=== printLogTask thread ===\r\n");
     uart_printf("Free heap memory left: %d bytes\r\n", xPortGetFreeHeapSize());
-    vTaskDelay(pdMS_TO_TICKS(100));
+    vTaskDelay(pdMS_TO_TICKS(1000));
   }
 }
 

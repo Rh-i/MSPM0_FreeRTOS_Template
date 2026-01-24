@@ -6,8 +6,8 @@ extern "C"
 {
 #endif
 
-  void printLogTask();
-  void blinkTask();
+  void printLogTask(void *pvParameters);
+  void blinkTask(void *pvParameters);
 
 #ifdef __cplusplus
 }

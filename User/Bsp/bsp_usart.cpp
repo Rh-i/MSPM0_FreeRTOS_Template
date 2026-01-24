@@ -9,7 +9,7 @@
  * 
  */
 
-#include "bsp_usart.h"
+#include "bsp_usart.hpp"
 #include "ti_msp_dl_config.h"
 #include "ti/driverlib/dl_uart.h"
 #include <stdio.h>

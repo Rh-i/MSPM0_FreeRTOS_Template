@@ -9,7 +9,7 @@ root
 │                 │README.md     本文件
 │                 │run_syscfg_main.bat  运行syscfg脚本
 │                 |---
-├─.vscode         |VSCode配置目录，有调试设置
+├─.vscode         |VSCode配置目录，有调试设置，task设置
 ├─build           |构建输出目录 里面有`compile_commands.json`（clangd）
 ├─Core            |核心源代码目录
 │  ├─Inc          |略
@@ -28,6 +28,8 @@ root
 > 对这几个层的理解是 板载支持包完全是按照芯片引脚等等信息来写一层封装，在BSP的基础上，一点点的封装出对应的驱动/设备Drv，然后多个驱动/设备Drv连接起来，这就是中间层Mid。应用层就是把Mid和Drv的东西都拎出来，变成具体的任务。算法Alg就是穿插在这里面的。
 >
 > 也就是说，移植工程只需重写BSP的接口，就可以完整的用上之前的工程。那就得做到尽可能的解耦，以及树状结构，还有良好的封装。
+>
+> 这里面的bat文件，只需要双击就可以运行；拖进命令行也可以运行；使用终端，运行任务，选择给定任务也可以运行
 
 这个工程取自25年电赛国一的ti，里面存在freertos，个人只是写一个操作指南
 
@@ -49,6 +51,8 @@ set(MSPM0_SDK_PATH  D:\\Users\\admin\\Desktop\\work\\Toolchain\\ti\\mspm0_sdk_2_
 编译：使用cmake
 
 烧录：使用JLink或者OpenOCD都写好了烧录脚本，几乎可以移植了直接用还不需要修改对应的文件名
+
+希望用JLink 我用OpenOCD会锁芯片
 
 调试：写好了调试器模板OpenOCD和JLink的都有
 
@@ -76,9 +80,11 @@ HAL库也早就写好了cpp调用c的`extern "C"`内容
 
 正常cpp文件为：`xxx_yyyy.cpp` 和 `xxx_yyyy.hpp` 作为区分 用**`hpp`**
 
-xxx: app mid bsp drv alg
+正常c文件为：`xxx_yyyy.c` 和 `xxx_yyyy.h` 用且只能用**`h`**
+
+`xxx为 app mid bsp drv alg`
 
 多去试试新的写法
 
-**最终迭代成使用CMAKE，工程使用C++书写，开盒即用**
+# 最终迭代成使用CMAKE，工程使用C++书写，开盒即用**
 

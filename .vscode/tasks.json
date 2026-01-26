@@ -18,14 +18,14 @@
 			{
 				"label": "run_syscfg",
 				"type": "process",
-				"command": "run_syscfg_main.bat",
+				"command": "SysConfig\\run_syscfg_main.bat",
 				"group": "build",
 				"problemMatcher": []
 			},
 			{
 				"label": "tempkill",
 				"type": "process",
-				"command": "tempkill.bat",
+				"command": "Flash\\tempkill.bat",
 				"group": "build",
 				"problemMatcher": []
 			}

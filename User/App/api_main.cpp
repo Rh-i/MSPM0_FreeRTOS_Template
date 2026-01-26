@@ -1,5 +1,5 @@
 /**
- * @file Api_main.cpp
+ * @file api_main.cpp
  * @author Rh
  * @brief 主要用于freertos的任务定义以及c风格声明
  * @version 0.1
@@ -25,11 +25,13 @@
 
 void printLogTask(void *pvParameters)
 {
+  int count = 0;
   while (true)
   {
-    uart_printf("=== printLogTask thread ===\r\n");
-    uart_printf("Free heap memory left: %d bytes\r\n", xPortGetFreeHeapSize());
-    vTaskDelay(pdMS_TO_TICKS(1000));
+    count++;
+    uart_printf("=== printLogTask thread %d ===\r\n",count);
+    // uart_printf("Free heap memory left: %d bytes\r\n", xPortGetFreeHeapSize());
+    vTaskDelay(pdMS_TO_TICKS(100));
   }
 }
 
@@ -38,7 +40,7 @@ void blinkTask(void *pvParameters)
   while (true)
   {
     // LED 5Hz频率闪烁
-    // DL_GPIO_togglePins(PORTA_PORT, PORTA_LED_USER_PIN);
-    vTaskDelay(pdMS_TO_TICKS(100));
+    DL_GPIO_togglePins(GPIOB, DL_GPIO_PIN_22);
+    vTaskDelay(pdMS_TO_TICKS(200));
   }
 }

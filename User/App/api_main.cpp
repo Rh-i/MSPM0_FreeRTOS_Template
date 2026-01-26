@@ -28,9 +28,8 @@ void printLogTask(void *pvParameters)
   int count = 0;
   while (true)
   {
-    count++;
+    count+=2;
     uart_printf("=== printLogTask thread %d ===\r\n",count);
-    // uart_printf("Free heap memory left: %d bytes\r\n", xPortGetFreeHeapSize());
     vTaskDelay(pdMS_TO_TICKS(100));
   }
 }
@@ -41,6 +40,6 @@ void blinkTask(void *pvParameters)
   {
     // LED 5Hz频率闪烁
     DL_GPIO_togglePins(GPIOB, DL_GPIO_PIN_22);
-    vTaskDelay(pdMS_TO_TICKS(200));
+    vTaskDelay(pdMS_TO_TICKS(500));
   }
 }

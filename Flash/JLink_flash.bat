@@ -47,6 +47,6 @@ REM 执行 J-Link
 JLink -CommanderScript "!TEMP_SCRIPT!"
 
 REM 清理临时文件
-@REM del "!TEMP_SCRIPT!"
+del "!TEMP_SCRIPT!"
 
 pause

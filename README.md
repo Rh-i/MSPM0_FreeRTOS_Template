@@ -44,6 +44,8 @@ root
 set(MSPM0_SDK_PATH  D:\\Users\\admin\\Desktop\\work\\Toolchain\\ti\\mspm0_sdk_2_07_00_05)
 ```
 
+同时要修改`run_syscfg.bat`这个文件，改成自己的路径
+
 拿到一个新工程，或者转移了文件路径，要删掉vscode中原有的build目录，重新配置生成cmake，工具链选择arm_gcc，配置和编译应该都会成功
 
 ## 编译烧录调试
@@ -52,7 +54,7 @@ set(MSPM0_SDK_PATH  D:\\Users\\admin\\Desktop\\work\\Toolchain\\ti\\mspm0_sdk_2_
 
 烧录：使用JLink或者OpenOCD都写好了烧录脚本，几乎可以移植了直接用还不需要修改对应的文件名
 
-希望用JLink 我用OpenOCD会锁芯片
+说实话就得用JLink 我用OpenOCD会锁芯片
 
 调试：写好了调试器模板OpenOCD和JLink的都有
 

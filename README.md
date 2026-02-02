@@ -31,7 +31,7 @@ root
 >
 > 这里面的bat文件，只需要双击就可以运行；拖进命令行也可以运行；使用终端，运行任务，选择给定任务也可以运行
 
-这个工程取自25年电赛国一的ti，里面存在freertos，个人只是写一个操作指南
+这个工程取自25年电赛国一的ti，里面存在freertos。我把它整理成了一种类似STM32的文件样式，写了一个具体的操作指南
 
 ## 拿到工程要干嘛
 
@@ -54,9 +54,9 @@ set(MSPM0_SDK_PATH  D:\\Users\\admin\\Desktop\\work\\Toolchain\\ti\\mspm0_sdk_2_
 
 烧录：使用JLink或者OpenOCD都写好了烧录脚本，几乎可以移植了直接用还不需要修改对应的文件名
 
-说实话就得用JLink 我用OpenOCD会锁芯片
+说实话就得用JLink 我用OpenOCD会锁芯片（JLink，需要提前配置环境变量+安装JLink）
 
-调试：写好了调试器模板OpenOCD和JLink的都有
+调试：写好了调试器模板OpenOCD和JLink的都有 （OpenOCD没有测试过，但是烧录STM32时无问题）
 
 ## 如何开发
 
@@ -89,4 +89,3 @@ HAL库也早就写好了cpp调用c的`extern "C"`内容
 多去试试新的写法
 
 # 最终迭代成使用CMAKE，工程使用C++书写，开盒即用
-

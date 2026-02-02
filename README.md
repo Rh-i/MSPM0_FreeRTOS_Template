@@ -11,7 +11,7 @@ root
 │                 |---
 ├─.vscode         |VSCode配置目录，有调试设置，task设置
 ├─build           |构建输出目录 里面有`compile_commands.json`（clangd）
-├─Core            |核心源代码目录
+├─Core            |核心源代码目录 但是这个好像分的没有啥必要
 │  ├─Inc          |略
 │  └─Src          |略
 ├─Flash           |烧录脚本及相关配置，需要阅读一下，现在写的一般不用改

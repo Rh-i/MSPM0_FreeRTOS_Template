@@ -21,7 +21,7 @@ file(GLOB_RECURSE USER_SOURCES
     User/Mid/*.cpp
     User/Alg/*.c
     User/Alg/*.cpp
-    Core/Src/*.c
+    Main/*.c
 )
 
 add_executable(${CMAKE_PROJECT_NAME}.elf
@@ -38,7 +38,7 @@ add_executable(${CMAKE_PROJECT_NAME}.elf
 include_directories(
     ./FreeRTOS/include
     ./FreeRTOS/portable/GCC/ARM_CM0/
-    ./Core/Inc
+    ./Main
     ./User/App 
     ./User/Bsp 
     ./User/Drv 

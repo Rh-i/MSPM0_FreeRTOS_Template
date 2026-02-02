@@ -18,7 +18,7 @@
 			{
 				"label": "run_syscfg",
 				"type": "process",
-				"command": "SysConfig\\run_syscfg_main.bat",
+				"command": "run_syscfg_main.bat",
 				"group": "build",
 				"problemMatcher": []
 			},

@@ -22,6 +22,7 @@ file(GLOB_RECURSE USER_SOURCES
     User/Alg/*.c
     User/Alg/*.cpp
     Main/*.c
+    Main/*.cpp
 )
 
 add_executable(${CMAKE_PROJECT_NAME}.elf
